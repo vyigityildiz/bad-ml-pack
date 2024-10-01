@@ -2,11 +2,19 @@
 
 #include <vector>
 #include <array>
-#include <iostream>
 #include <string>
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 class read_csv {
     private:
+        std::string filePath;
+        char delimiter;
     public:
-        std::vector<int> readCsv(std::string filePath);
+
+        read_csv(std::string filePath, char delimiter = ',');
+
+        std::vector<int> readCsv();
 };
