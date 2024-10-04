@@ -16,5 +16,5 @@ class read_csv {
 
         read_csv(std::string filePath, char delimiter = ',');
 
-        std::vector<int> readCsv();
+        std::vector<std::vector<std::string>> readCsv();
 };
