@@ -2,8 +2,9 @@
 
 read_csv::read_csv(std::string filePath, char delimiter) : filePath(filePath), delimiter(delimiter) {}
 
-std::vector<std::vector<std::string>> read_csv::readCsv() {
-    std::vector<std::vector<std::string>> data;
+std::map<std::string, std::vector<std::string>> read_csv::readCsv() {
+    std::vector<std::vector<std::string>> dataRaw;
+    std::map<std::string, std::vector<std::string>> data;
 
     std::ifstream file;
     file.open(filePath);
@@ -30,7 +31,7 @@ std::vector<std::vector<std::string>> read_csv::readCsv() {
             }
         }
 
-        data.push_back(row);
+        dataRaw.push_back(row);
     }
 
     file.close();

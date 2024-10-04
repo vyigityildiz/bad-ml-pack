@@ -3,6 +3,7 @@
 #include <vector>
 #include <array>
 #include <string>
+#include <map>
 
 #include <iostream>
 #include <fstream>
@@ -16,5 +17,5 @@ class read_csv {
 
         read_csv(std::string filePath, char delimiter = ',');
 
-        std::vector<std::vector<std::string>> readCsv();
+        std::map<std::string, std::vector<std::string>> readCsv();
 };
