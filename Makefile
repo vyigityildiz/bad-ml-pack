@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++17 -Wall -I include
 #LDFLAGS = -L lib -l SDL2-2.0.0
 
 # Sources
-SOURCES = src/read_csv.cpp src/main.cpp src/regression.cpps
+SOURCES = src/read_csv.cpp src/main.cpp src/regression.cpp
 
 # Object files
 OBJECTS = $(SOURCES:.cpp=.o)

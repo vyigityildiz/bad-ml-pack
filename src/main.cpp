@@ -5,7 +5,7 @@
 int main () {
     read_csv reader("realestate.csv");
 
-    std::vector<std::vector<std::string>> data = reader.readCsv();
+    std::map<std::string, std::vector<std::string>> data = reader.readCsv();
 
     return 0;
 }
