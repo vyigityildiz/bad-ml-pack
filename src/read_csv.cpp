@@ -4,7 +4,7 @@ read_csv::read_csv(std::string filePath, char delimiter) : filePath(filePath), d
 
 std::map<std::string, std::vector<std::string>> read_csv::readCsv() {
     std::vector<std::vector<std::string>> dataRaw;
-    std::map<std::string, std::vector<std::string>> data;
+    std::map<std::string, std::vector<std::string>> data; // TODO: change the structure
 
     std::ifstream file;
     file.open(filePath);
@@ -32,6 +32,18 @@ std::map<std::string, std::vector<std::string>> read_csv::readCsv() {
         }
 
         dataRaw.push_back(row);
+    }
+
+    for (auto it:dataRaw[0]) {
+        data[it] = std::vector<std::string>();
+    }
+    dataRaw.erase(dataRaw.begin());
+
+    for (auto iter:dataRaw) {
+        for (auto i:iter) {
+            // implement  structural change here
+            continue;
+        }
     }
 
     file.close();
