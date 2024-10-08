@@ -13,6 +13,4 @@ class LinearRegression {
         std::vector<double> coef_;
     public:
         LinearRegression(std::vector<std::vector<std::string>> data);
-
-
 };
