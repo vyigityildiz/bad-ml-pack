@@ -7,6 +7,7 @@
 #include <cmath>
 
 #include <iostream>
+#include <stdexcept>
 
 class Vector {
     private:
@@ -43,6 +44,7 @@ class Matrix {
 
         // operations
         Matrix transpose() const;
+        Matrix inverse() const;
         Vector operator*(const Vector& other); // matrix vector multiplication
         Matrix operator*(const Matrix& other); // matrix matrix multiplication
 
